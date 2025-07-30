@@ -1,0 +1,8 @@
+name: WebRemote
+description: Camera Web Remote
+icon: share/svg/vnc.svg
+path: extras/webremote
+#daemon: kvmd-vnc
+#port: vnc/server/port
+place: 10
+enabled: true
