@@ -1,0 +1,14 @@
+[Unit]
+Description=PiCARD - EDID loader for TC358743
+Wants=dev-kvmd\x2dcam%i.device
+After=dev-kvmd\x2dcam%i.device systemd-modules-load.service
+Before=kvmd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/v4l2-ctl --device=/dev/kvmd-cam%i --set-edid=file=/etc/kvmd/tc358743-edid.hex --info-edid
+ExecStop=/usr/bin/v4l2-ctl --device=/dev/kvmd-cam%i --clear-edid
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
