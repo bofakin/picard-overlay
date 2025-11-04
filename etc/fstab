@@ -8,3 +8,5 @@ tmpfs         /var/tmp            tmpfs  nodev,nosuid,mode=1777  0 0
 tmpfs         /tmp                tmpfs  nodev,nosuid,mode=1777  0 0
 LABEL=PIPST  /var/lib/kvmd/pst  ext4  nodev,nosuid,noexec,ro,errors=remount-ro,X-kvmd.pst-user=kvmd-pst  0 2
 LABEL=PIMSD  /var/lib/kvmd/msd  ext4  nodev,nosuid,noexec,ro,errors=remount-ro,X-kvmd.otgmsd-user=kvmd  0 2
+tmpfs        /var/lib/kvmd/msd/ram tmpfs nodev,nosuid,noexec,mode=1777,size=1g 0 0
+
